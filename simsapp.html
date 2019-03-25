@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif" rel="stylesheet">
+	<title>Sims Randomizer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "PT Serif", serif;
+}
+
+body {
+  padding: 15px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  margin-bottom: 5px;
+}
+
+/* Create two equal columns that floats next to each other */
+
+section {
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.trait-section {
+  height: 18px;
+  font-size: 18px;
+}
+
+.column {
+  display: inline-block;
+  width: 50%;
+  height: 150px;
+  padding: 10px;
+}
+
+.column h3 {
+
+}
+
+.row {
+  display: flex;
+}
+/*.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}*/*/
+</style>
+</head>
+
+<body style="background-color:#3366FF;">
+  <section>
+    <h1>Sims Randomizer</h1>
+    <p>Select a life stage and hit "randomize" to select traits</p>
+  </section>
+
+  <section>
+    <h2>Toddler</h2>
+    <button onclick="toddlert2()">Random Toddler Trait</button>
+    <p class="trait-section" id="toddlertresult"></p>
+  </section>
+
+  <section>
+    <h2>Child</h2>
+
+    <div class="row">
+      <div class="column" style="background-color:#99CCFF;">
+        <h3>Motivation</h3>
+        
+        <button onclick="childrandommot()">Random Child Motivation</button>
+
+        <p class="trait-section" id="childmotivation"></p>
+      </div>
+
+      <div class="column" style="background-color:#9999FF;">
+        <h3>Trait</h3>
+        <button onclick="childrandomtrait()">Random Child Trait</button>
+        <p class="trait-section" id="childtrait"></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Teen</h2>
+    <button onclick="teenrandomtrait()">Random Teen Trait</button>
+    <p class="trait-section" id="teentrait"></p>
+  </section>
+
+  <section>
+    <h2>Adult</h2>
+    <button onclick="adultrandomtrait()">Random Adult Trait</button>
+    <p class="trait-section" id="adulttrait"></p>
+  </section>
+</body>
+
+
+
+
+<script>
+
+  function sample(array) {
+    const randomNumber = Math.floor(Math.random() * array.length)
+    return array[randomNumber]
+  }
+  // Toddler
+  const toddlert =[
+    '1. Angelic',
+    '2. Charmer',
+    '3. Clingy', 
+    '4. Fussy',
+    '5. Independent',
+    '6. Inquisitive',
+    '7. Silly',
+    '8. Wild'
+  ]
+
+  function toddlert2() {
+    document.getElementById('toddlertresult').innerHTML = sample(toddlert)
+  }
+
+  // Child
+
+  const childmotivations =[
+  	'1. Creativity',
+    '2. Motor',
+    '3. Mental',
+    '4. Social'
+  ]
+
+  const alltraits =[
+    '1. Active', 
+    '2. Cheerful', 
+    '3. Creative', 
+    '4. Genius', 
+    '5. Gloomy', 
+    '6. Goofball', 
+    '7. Hot-Headed', 
+    '8. Romantic', 
+    '9. Self-Assured', 
+    '10. Unflirty', 
+    '11. Art Lover', 
+    '12. Bookworm', 
+    '13. Foodie', 
+    '14. Geek', 
+    '15. Music Lover', 
+    '16. Perfectionist', 
+    '17. Ambitious', 
+    '18. Cat Lover', 
+    '19. Childish', 
+    '20. Clumsy', 
+    '21. Dance Machine', 
+    '22. Dog Lover', 
+    '23. Erratic', 
+    '24. Glutton', 
+    '25. Kleptomaniac', 
+    '26. Lazy', 
+    '27. Loves Outdoors', 
+    '28. Materialistic', 
+    '29. Neat', 
+    '30. Slob', 
+    '31. Snob', 
+    '32. Squeamish', 
+    '33. Vegetarian', 
+    '34. Bro', 
+    '35. Evil', 
+    '36. Family-oriented', 
+    '37. Good', 
+    '38. Hates Children', 
+    '39. Insider', 
+    '40. Jealous', 
+    '41. Loner', 
+    '42. Mean', 
+    '43. Noncommittal', 
+    '44. Outgoing', 
+    '45. Paranoid', 
+    '46. Self-Absorbed'
+  ]
+
+  function childrandommot() {
+    document.getElementById('childmotivation').innerHTML = sample(childmotivations)
+  }
+
+  function childrandomtrait() {
+    document.getElementById('childtrait').innerHTML = sample(alltraits)
+  }
+
+  function teenrandomtrait() {
+    document.getElementById('teentrait').innerHTML = sample(alltraits)
+  }
+
+  function adultrandomtrait() {
+    document.getElementById('adulttrait').innerHTML = sample(alltraits)
+  }
+</script>
+
+</html>
+
+
+
+
+
+
+<!-- SCRATCH PAD -->
+<!-- 
+
+Toddler trait generatior version 1 (number plus list)
+<h2>Toddler</h2>
+
+<ol type="1">
+  <li>Angelic</li>
+  <li>Charmer</li>
+  <li>Clingy</li>
+  <li>Fussy</li>
+  <li>Independent</li>
+  <li>Inquisitive</li>
+  <li>Silly</li>
+  <li>Wild</li>
+</ol>
+
+<button onclick="toddlerrandom()">Random Toddler Trait</button>
+
+<p id="toddlertrait"></p>
+
+<script>
+function toddlerrandom() {
+  var x = Math.floor((Math.random() * 8) + 1);
+  document.getElementById("toddlertrait").innerHTML = x;
+}
+</script> -->
