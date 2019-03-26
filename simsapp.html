@@ -19,10 +19,14 @@ h1, h2, h3 {
 
 body {
   padding: 15px;
+  background-image: url("https://vignette.wikia.nocookie.net/sims/images/d/da/TS4_Logo_Plumbob.jpg.png/revision/latest?cb=20130805025749");
+  background-size: 25% 75%;
+  background-color:#ccffcc;
 }
 
 h1 {
   margin-bottom: 10px;
+  font-size: 50px;
 }
 
 h2, h3 {
@@ -38,12 +42,21 @@ section {
 button {
   padding: 3px;
   cursor: pointer;
+  font-size: 16px;
   border-radius: 3px;
+  margin-bottom: 5px;
 }
 
 .trait-section {
-  height: 18px;
+  height: 40px;
   font-size: 18px;
+  border-style: double;
+  margin-right: 50%;
+  background-color: #ffffff;
+  opacity: 0.9;
+  filter: alpha(opacity=30);
+  padding:4px;
+  padding-left: 8px;
 }
 
 .column {
@@ -51,6 +64,8 @@ button {
   width: 50%;
   height: 150px;
   padding: 10px;
+  opacity: 0.9;
+  filter: alpha(opacity=60);
 }
 
 .column h3 {
@@ -75,10 +90,13 @@ button {
 </style>
 </head>
 
-<body style="background-color:#3366FF;">
+<body>
   <section>
     <h1>Sims Randomizer</h1>
-    <p>Select a life stage and hit "randomize" to select traits</p>
+    <p>Select a life stage and hit "randomize" to select traits.</p>
+    <p>
+      For official 100 baby challenge rules, click <a href="https://snarky-sims-witch.tumblr.com/post/181535303038/tos-i-am-the-original-writer-of-the-sims-4-version">here</a>.
+    </p>
   </section>
 
   <section>
@@ -91,7 +109,7 @@ button {
     <h2>Child</h2>
 
     <div class="row">
-      <div class="column" style="background-color:#99CCFF;">
+      <div class="column" style="background-color:#006600;">
         <h3>Motivation</h3>
         
         <button onclick="childrandommot()">Random Child Motivation</button>
@@ -99,7 +117,7 @@ button {
         <p class="trait-section" id="childmotivation"></p>
       </div>
 
-      <div class="column" style="background-color:#9999FF;">
+      <div class="column" style="background-color:#00b300;">
         <h3>Trait</h3>
         <button onclick="childrandomtrait()">Random Child Trait</button>
         <p class="trait-section" id="childtrait"></p>
